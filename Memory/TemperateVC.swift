@@ -6,4 +6,12 @@
 //  Copyright © 2019 Rui. All rights reserved.
 //
 
-import Foundation
+import UIKit
+/*
+ 
+ for test, delete latter
+ */
+
+class tempVC: UIViewController {
+    
+}
