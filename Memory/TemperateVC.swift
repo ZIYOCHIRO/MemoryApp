@@ -13,9 +13,8 @@ import UIKit
  */
 
 class tempVC: UIViewController {
-    // feature 1
     
-    // feature 2
-    
-    // feature 3
+    func set() {
+        
+    }
 }
