@@ -14,7 +14,8 @@ import UIKit
 
 class tempVC: UIViewController {
     
-    func set() {
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Feature 1.
     }
 }
