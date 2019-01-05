@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0DC90AD421E0905500592E6E /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC90AD321E0905500592E6E /* TripModel.swift */; };
 		0DC90AD621E0906100592E6E /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC90AD521E0906100592E6E /* TripFunctions.swift */; };
+		0DC90AD821E0958C00592E6E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC90AD721E0958C00592E6E /* Data.swift */; };
+		0DC90ADE21E0D32C00592E6E /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DC90ADD21E0D32C00592E6E /* TripsViewController.storyboard */; };
+		0DC90AE021E0D77100592E6E /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC90ADF21E0D77100592E6E /* TripsViewController.swift */; };
 		0DCC35BB21DDC000000185E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCC35BA21DDC000000185E6 /* AppDelegate.swift */; };
 		0DCC35C221DDC001000185E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DCC35C121DDC001000185E6 /* Assets.xcassets */; };
 		0DCC35C521DDC001000185E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DCC35C321DDC001000185E6 /* LaunchScreen.storyboard */; };
@@ -18,6 +21,9 @@
 /* Begin PBXFileReference section */
 		0DC90AD321E0905500592E6E /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		0DC90AD521E0906100592E6E /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
+		0DC90AD721E0958C00592E6E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		0DC90ADD21E0D32C00592E6E /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
+		0DC90ADF21E0D77100592E6E /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		0DCC35B721DDC000000185E6 /* Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DCC35BA21DDC000000185E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DCC35C121DDC001000185E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +46,7 @@
 		0DC90AD121E0903600592E6E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0DC90AD721E0958C00592E6E /* Data.swift */,
 				0DC90AD221E0904600592E6E /* Trip */,
 			);
 			path = Model;
@@ -52,6 +59,23 @@
 				0DC90AD521E0906100592E6E /* TripFunctions.swift */,
 			);
 			path = Trip;
+			sourceTree = "<group>";
+		};
+		0DC90AD921E0D2C200592E6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0DC90ADA21E0D2D900592E6E /* TripsViewController */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0DC90ADA21E0D2D900592E6E /* TripsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0DC90ADD21E0D32C00592E6E /* TripsViewController.storyboard */,
+				0DC90ADF21E0D77100592E6E /* TripsViewController.swift */,
+			);
+			path = TripsViewController;
 			sourceTree = "<group>";
 		};
 		0DCC35AE21DDC000000185E6 = {
@@ -73,6 +97,7 @@
 		0DCC35B921DDC000000185E6 /* Memory */ = {
 			isa = PBXGroup;
 			children = (
+				0DC90AD921E0D2C200592E6E /* Views */,
 				0DC90AD121E0903600592E6E /* Model */,
 				0DCC35BA21DDC000000185E6 /* AppDelegate.swift */,
 				0DCC35CC21DDFCF5000185E6 /* TemperateVC.swift */,
@@ -142,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DCC35C521DDC001000185E6 /* LaunchScreen.storyboard in Resources */,
+				0DC90ADE21E0D32C00592E6E /* TripsViewController.storyboard in Resources */,
 				0DCC35C221DDC001000185E6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,7 +180,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DCC35CD21DDFCF5000185E6 /* TemperateVC.swift in Sources */,
+				0DC90AD821E0958C00592E6E /* Data.swift in Sources */,
 				0DCC35BB21DDC000000185E6 /* AppDelegate.swift in Sources */,
+				0DC90AE021E0D77100592E6E /* TripsViewController.swift in Sources */,
 				0DC90AD621E0906100592E6E /* TripFunctions.swift in Sources */,
 				0DC90AD421E0905500592E6E /* TripModel.swift in Sources */,
 			);
