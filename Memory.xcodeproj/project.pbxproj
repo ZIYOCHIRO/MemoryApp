@@ -15,10 +15,13 @@
 		0DC90AE221E0E37300592E6E /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC90AE121E0E37300592E6E /* TripsTableViewCell.swift */; };
 		0DC90AE521E0E9D800592E6E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC90AE421E0E9D800592E6E /* UIViewExtensions.swift */; };
 		0DC90AE821E0ED2B00592E6E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC90AE721E0ED2B00592E6E /* Theme.swift */; };
+		0DC90AEA21E1A1B800592E6E /* IndieFlower.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DC90AE921E1A1B800592E6E /* IndieFlower.ttf */; };
+		0DC90AEC21E1A1CA00592E6E /* PermanentMarker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DC90AEB21E1A1CA00592E6E /* PermanentMarker-Regular.ttf */; };
 		0DCC35BB21DDC000000185E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCC35BA21DDC000000185E6 /* AppDelegate.swift */; };
 		0DCC35C221DDC001000185E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DCC35C121DDC001000185E6 /* Assets.xcassets */; };
 		0DCC35C521DDC001000185E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DCC35C321DDC001000185E6 /* LaunchScreen.storyboard */; };
 		0DCC35CD21DDFCF5000185E6 /* TemperateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCC35CC21DDFCF5000185E6 /* TemperateVC.swift */; };
+		0DFA4C9E21E1AC780091D325 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DFA4C9D21E1AC780091D325 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +33,15 @@
 		0DC90AE121E0E37300592E6E /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 		0DC90AE421E0E9D800592E6E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		0DC90AE721E0ED2B00592E6E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		0DC90AE921E1A1B800592E6E /* IndieFlower.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IndieFlower.ttf; sourceTree = "<group>"; };
+		0DC90AEB21E1A1CA00592E6E /* PermanentMarker-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PermanentMarker-Regular.ttf"; sourceTree = "<group>"; };
 		0DCC35B721DDC000000185E6 /* Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DCC35BA21DDC000000185E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DCC35C121DDC001000185E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DCC35C421DDC001000185E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DCC35C621DDC001000185E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DCC35CC21DDFCF5000185E6 /* TemperateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperateVC.swift; sourceTree = "<group>"; };
+		0DFA4C9D21E1AC780091D325 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +102,10 @@
 		0DC90AE621E0ECFE00592E6E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0DC90AE921E1A1B800592E6E /* IndieFlower.ttf */,
+				0DC90AEB21E1A1CA00592E6E /* PermanentMarker-Regular.ttf */,
 				0DC90AE721E0ED2B00592E6E /* Theme.swift */,
+				0DFA4C9D21E1AC780091D325 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -194,6 +203,9 @@
 				0DCC35C521DDC001000185E6 /* LaunchScreen.storyboard in Resources */,
 				0DC90ADE21E0D32C00592E6E /* TripsViewController.storyboard in Resources */,
 				0DCC35C221DDC001000185E6 /* Assets.xcassets in Resources */,
+				0DFA4C9E21E1AC780091D325 /* Colors.xcassets in Resources */,
+				0DC90AEC21E1A1CA00592E6E /* PermanentMarker-Regular.ttf in Resources */,
+				0DC90AEA21E1A1B800592E6E /* IndieFlower.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Memory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,6 +382,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Memory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

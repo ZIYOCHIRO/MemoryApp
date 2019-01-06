@@ -9,5 +9,9 @@
 import UIKit
 
 class Theme {
-    static let mainFontName = ""
+    static let mainFontName = "PermanentMarker-Regular"
+    static let accentFontName = "IndieFlower"
+    static let accent = UIColor(named: "Accent")
+    static let background = UIColor(named: "Background")
+    static let tint = UIColor(named: "Tint")
 }

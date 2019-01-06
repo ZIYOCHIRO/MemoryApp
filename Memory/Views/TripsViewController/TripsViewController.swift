@@ -21,6 +21,8 @@ class TripsViewController: UIViewController {
             self?.tableView.reloadData()
         }
         
+        // you must change tableView background and cell background color to clear in storyboard.
+        view.backgroundColor = Theme.background
 
 
     }

@@ -18,6 +18,10 @@ class TripsTableViewCell: UITableViewCell {
         
         // Initialization code
         cardView.addShadowAndRoundedCorners()
+        titleLabel.font = UIFont(name: Theme.mainFontName, size: 32)
+        cardView.backgroundColor = Theme.accent
+        titleLabel.textColor = Theme.tint
+        
         
         
     }
