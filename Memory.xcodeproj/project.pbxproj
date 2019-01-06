@@ -12,6 +12,9 @@
 		0DC90AD821E0958C00592E6E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC90AD721E0958C00592E6E /* Data.swift */; };
 		0DC90ADE21E0D32C00592E6E /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DC90ADD21E0D32C00592E6E /* TripsViewController.storyboard */; };
 		0DC90AE021E0D77100592E6E /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC90ADF21E0D77100592E6E /* TripsViewController.swift */; };
+		0DC90AE221E0E37300592E6E /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC90AE121E0E37300592E6E /* TripsTableViewCell.swift */; };
+		0DC90AE521E0E9D800592E6E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC90AE421E0E9D800592E6E /* UIViewExtensions.swift */; };
+		0DC90AE821E0ED2B00592E6E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC90AE721E0ED2B00592E6E /* Theme.swift */; };
 		0DCC35BB21DDC000000185E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCC35BA21DDC000000185E6 /* AppDelegate.swift */; };
 		0DCC35C221DDC001000185E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DCC35C121DDC001000185E6 /* Assets.xcassets */; };
 		0DCC35C521DDC001000185E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DCC35C321DDC001000185E6 /* LaunchScreen.storyboard */; };
@@ -24,6 +27,9 @@
 		0DC90AD721E0958C00592E6E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		0DC90ADD21E0D32C00592E6E /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
 		0DC90ADF21E0D77100592E6E /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		0DC90AE121E0E37300592E6E /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
+		0DC90AE421E0E9D800592E6E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		0DC90AE721E0ED2B00592E6E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		0DCC35B721DDC000000185E6 /* Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DCC35BA21DDC000000185E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DCC35C121DDC001000185E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,8 +80,25 @@
 			children = (
 				0DC90ADD21E0D32C00592E6E /* TripsViewController.storyboard */,
 				0DC90ADF21E0D77100592E6E /* TripsViewController.swift */,
+				0DC90AE121E0E37300592E6E /* TripsTableViewCell.swift */,
 			);
 			path = TripsViewController;
+			sourceTree = "<group>";
+		};
+		0DC90AE321E0E9B000592E6E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0DC90AE421E0E9D800592E6E /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0DC90AE621E0ECFE00592E6E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0DC90AE721E0ED2B00592E6E /* Theme.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		0DCC35AE21DDC000000185E6 = {
@@ -99,6 +122,8 @@
 			children = (
 				0DC90AD921E0D2C200592E6E /* Views */,
 				0DC90AD121E0903600592E6E /* Model */,
+				0DC90AE321E0E9B000592E6E /* Extensions */,
+				0DC90AE621E0ECFE00592E6E /* Resources */,
 				0DCC35BA21DDC000000185E6 /* AppDelegate.swift */,
 				0DCC35CC21DDFCF5000185E6 /* TemperateVC.swift */,
 				0DCC35C121DDC001000185E6 /* Assets.xcassets */,
@@ -179,11 +204,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DC90AE821E0ED2B00592E6E /* Theme.swift in Sources */,
 				0DCC35CD21DDFCF5000185E6 /* TemperateVC.swift in Sources */,
 				0DC90AD821E0958C00592E6E /* Data.swift in Sources */,
+				0DC90AE521E0E9D800592E6E /* UIViewExtensions.swift in Sources */,
 				0DCC35BB21DDC000000185E6 /* AppDelegate.swift in Sources */,
 				0DC90AE021E0D77100592E6E /* TripsViewController.swift in Sources */,
 				0DC90AD621E0906100592E6E /* TripFunctions.swift in Sources */,
+				0DC90AE221E0E37300592E6E /* TripsTableViewCell.swift in Sources */,
 				0DC90AD421E0905500592E6E /* TripModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
