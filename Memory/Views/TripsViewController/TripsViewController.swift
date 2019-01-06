@@ -11,6 +11,7 @@ import UIKit
 class TripsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,9 @@ class TripsViewController: UIViewController {
         
         // you must change tableView background and cell background color to clear in storyboard.
         view.backgroundColor = Theme.background
-
-
+        // if you check the clip to bounds in IB, then there will be no shadow!
+        addButton.createFloatingActionButton()
+        
     }
     
 }
