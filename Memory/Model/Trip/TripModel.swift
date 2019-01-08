@@ -6,14 +6,16 @@
 //  Copyright © 2019 Rui. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class TripModel {
     var id: UUID
     var title: String //required
+    var image: UIImage?
     
-    init(title: String) {
+    init(title: String, image: UIImage? = nil) {
         self.id = UUID()
         self.title = title
+        self.image = image
     }
 }
