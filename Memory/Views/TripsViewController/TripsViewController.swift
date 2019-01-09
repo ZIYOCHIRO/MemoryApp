@@ -12,17 +12,29 @@ class TripsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet var helpView: UIVisualEffectView!
     
     var tripIndexToEdit: Int?
+    let seenHelpView = "seenTripHelp"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         
-        TripFunctions.readTrips { [weak self] in
-            self?.tableView.reloadData()
+        TripFunctions.readTrips { [unowned self] in
+            self.tableView.reloadData()
+            if Data.tripModels.count > 0 {
+                // set up the help view
+                if UserDefaults.standard.bool(forKey: self.seenHelpView) == false {
+                    self.view.addSubview(self.helpView)
+                    self.helpView.frame = self.view.frame
+                }
+            }
         }
+        
+        
+        
         
         // you must change tableView background and cell background color to clear in storyboard.
         view.backgroundColor = Theme.backgroundColor
@@ -38,6 +50,17 @@ class TripsViewController: UIViewController {
             popup.doneSaving = { [weak self] in
                 self?.tableView.reloadData()
             }
+            tripIndexToEdit = nil
+        }
+    }
+    
+    @IBAction func closeHelpView(_ sender: AppUIButton) {
+        // it's a subview, not a popup  -> X dismiss
+        UIView.animate(withDuration: 0.5, animations: {
+            self.helpView.alpha = 0
+        }) { (success) in
+            self.helpView.removeFromSuperview()
+            UserDefaults.standard.set(true, forKey: self.seenHelpView)
         }
     }
     
