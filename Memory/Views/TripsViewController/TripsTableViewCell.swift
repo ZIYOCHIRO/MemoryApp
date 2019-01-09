@@ -20,12 +20,9 @@ class TripsTableViewCell: UITableViewCell {
         // Initialization code
         cardView.addShadowAndRoundedCorners()
         titleLabel.font = UIFont(name: Theme.mainFontName, size: 32)
-        cardView.backgroundColor = Theme.accent
+        cardView.backgroundColor = Theme.accentColor
         tripImageView.layer.cornerRadius = cardView.layer.cornerRadius
        
-        
-        
-        
     }
     
     func setUp(tripModel: TripModel) {

@@ -18,6 +18,7 @@ class AddTripViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     
     var doneSaving: (() -> ())?  // it's a function
+    var tripIndexToEdit: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,13 @@ class AddTripViewController: UIViewController {
         titleLable.layer.shadowRadius = 5
         
         imageView.layer.cornerRadius = 15
+        
+        if let index = tripIndexToEdit {
+            let trip = Data.tripModels[index]
+            tripTextField.text = trip.title
+            imageView.image = trip.image
+            
+        }
 
     }
     
@@ -48,16 +56,15 @@ class AddTripViewController: UIViewController {
             
             tripTextField.rightView = imageView
             tripTextField.rightViewMode = .always
-            
-            
-             return    // if return then the following code will not be execuated
-            
-            // Alternatives
-//            tripTextField.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
-
-           
+             return
         }
-        TripFunctions.createTrip(tripModel: TripModel(title: tripTextField.text!, image: imageView.image))
+        
+        if let index = tripIndexToEdit {
+            TripFunctions.updateTrip(at: index, title: newTripName, image: imageView.image)
+        } else {
+           TripFunctions.createTrip(tripModel: TripModel(title: tripTextField.text!, image: imageView.image))
+        }
+        
         if let doneSaving = doneSaving {
             doneSaving()
         }

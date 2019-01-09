@@ -13,7 +13,7 @@ class AppUIButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        backgroundColor = Theme.tint
+        backgroundColor = Theme.tintColor
         layer.cornerRadius = frame.height / 2
         setTitleColor(UIColor.white, for: .normal)
     }
