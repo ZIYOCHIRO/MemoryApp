@@ -16,19 +16,28 @@ class TripFunctions {
     }
     
     static func readTrips(completion:@escaping () -> ()) {
-        // 1st-this code will be called on the background thread
-        DispatchQueue.global(qos: .userInteractive).async {
+       // Replace with real data store code
+        DispatchQueue.global(qos: .userInitiated).async {
             if Data.tripModels.count == 0 {
                 Data.tripModels.append(TripModel(title: "Trip to Bail!"))
                 Data.tripModels.append(TripModel(title: "Mexico"))
                 Data.tripModels.append(TripModel(title: "Russian Trip"))
             }
-            // 2nd-the completion function will be called
             DispatchQueue.main.async {
                 completion()
             }
         }
-        
+    }
+    
+    static func readTrips(by id: UUID, completion:@escaping (TripModel?) -> ()) {
+        // 1st-this code will be called on the background thread
+        DispatchQueue.global(qos: .userInteractive).async {
+            let trip = Data.tripModels.first(where: { $0.id == id })
+            // 2nd-the completion function will be called
+            DispatchQueue.main.async {
+                completion(trip)
+            }
+        }
     }
     
     static func updateTrip(at index: Int, title: String, image: UIImage? = nil) {

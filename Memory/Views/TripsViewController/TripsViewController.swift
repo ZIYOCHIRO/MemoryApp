@@ -33,9 +33,6 @@ class TripsViewController: UIViewController {
             }
         }
         
-        
-        
-        
         // you must change tableView background and cell background color to clear in storyboard.
         view.backgroundColor = Theme.backgroundColor
         // if you check the clip to bounds in IB, then there will be no shadow!
@@ -114,6 +111,15 @@ extension TripsViewController: UITableViewDelegate, UITableViewDataSource {
         edit.image = #imageLiteral(resourceName: "edit")
         edit.backgroundColor = Theme.editcolor
         return UISwipeActionsConfiguration(actions: [edit])
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let trip = Data.tripModels[indexPath.row]
+        
+        let storyboard = UIStoryboard(name: String(describing: ActivityViewController.self), bundle: nil)
+        let vc = storyboard.instantiateInitialViewController() as! ActivityViewController
+        vc.tripId = trip.id
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 
