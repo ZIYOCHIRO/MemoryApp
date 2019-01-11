@@ -11,8 +11,13 @@ import UIKit
 class Theme {
     static let mainFontName = "PermanentMarker-Regular"
     static let accentFontName = "IndieFlower"
+    static let bodyFontName = "AvenirNext-Regular"
+    static let bodyFontNameBold = "AvenirNext-Bold"
+    static let bodyFontNameDemiBold = "AvenirNext-DemiBold"
+    
     static let accentColor = UIColor(named: "Accent")
     static let backgroundColor = UIColor(named: "Background")
     static let tintColor = UIColor(named: "Tint")
     static let editcolor = UIColor(named: "Edit")
+    
 }
