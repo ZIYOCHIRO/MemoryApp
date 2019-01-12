@@ -28,7 +28,7 @@ class TripsViewController: UIViewController {
                 // set up the help view
                 if UserDefaults.standard.bool(forKey: self.seenHelpView) == false {
                     self.view.addSubview(self.helpView)
-                    self.helpView.frame = self.view.frame
+                    self.helpView.frame = self.view.bounds
                 }
             }
         }
@@ -119,6 +119,7 @@ extension TripsViewController: UITableViewDelegate, UITableViewDataSource {
         let storyboard = UIStoryboard(name: String(describing: ActivityViewController.self), bundle: nil)
         let vc = storyboard.instantiateInitialViewController() as! ActivityViewController
         vc.tripId = trip.id
+        vc.tripTitle = trip.title
         navigationController?.pushViewController(vc, animated: true)
     }
     

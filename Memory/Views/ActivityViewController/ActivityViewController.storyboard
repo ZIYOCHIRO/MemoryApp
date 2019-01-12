@@ -24,7 +24,7 @@
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E7a-Xb-O67">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCell" id="NVl-fM-KTL" customClass="HeaderTableViewCell" customModule="Memory" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -51,6 +51,7 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="zQo-4k-2nw" secondAttribute="bottom" id="Djt-bM-6M6"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="zQo-4k-2nw" secondAttribute="trailing" id="eAt-PG-TAl"/>
@@ -58,6 +59,7 @@
                                                 <constraint firstItem="zQo-4k-2nw" firstAttribute="leading" secondItem="5Ef-lQ-h48" secondAttribute="leadingMargin" id="n8M-Pi-dmS"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="subtitleLabel" destination="R6g-Et-rSZ" id="aOt-gj-HaP"/>
                                             <outlet property="titleLabel" destination="meg-p9-wbC" id="f7C-0R-Odd"/>
@@ -75,6 +77,7 @@
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rdq-MI-tx4">
                                                             <rect key="frame" x="8" y="8" width="62" height="62"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="62" id="nPz-fJ-GaX"/>
                                                                 <constraint firstAttribute="width" secondItem="rdq-MI-tx4" secondAttribute="height" multiplier="1:1" id="vY9-fo-SdX"/>
@@ -118,6 +121,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="aqx-B4-zmK" secondAttribute="trailing" constant="8" id="sB7-VC-Ika"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="activityImageView" destination="rdq-MI-tx4" id="qry-w9-FmH"/>
                                             <outlet property="cardView" destination="aqx-B4-zmK" id="Gli-ul-0kE"/>
@@ -127,6 +131,15 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKf-bm-ftB" customClass="AppUIButton" customModule="Memory" customModuleProvider="target">
+                                <rect key="frame" x="311" y="591" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="addAction:" destination="Xpy-Xc-0Nu" eventType="touchUpInside" id="apO-le-96x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -142,6 +155,8 @@
                         <viewLayoutGuide key="safeArea" id="YZ8-tJ-IaQ"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="wKf-bm-ftB" id="3RY-SA-HmT"/>
+                        <outlet property="backgroudImageView" destination="mHY-X9-bR8" id="d1d-6A-Rfh"/>
                         <outlet property="tableView" destination="E7a-Xb-O67" id="vAm-aU-pX5"/>
                     </connections>
                 </viewController>
@@ -151,8 +166,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="24" height="24"/>
         <namedColor name="Accent">
             <color red="0.070588235294117646" green="0.15294117647058825" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <color key="tintColor" name="Tint"/>
 </document>

@@ -19,9 +19,7 @@ class TripFunctions {
        // Replace with real data store code
         DispatchQueue.global(qos: .userInitiated).async {
             if Data.tripModels.count == 0 {
-                Data.tripModels.append(TripModel(title: "Trip to Bail!"))
-                Data.tripModels.append(TripModel(title: "Mexico"))
-                Data.tripModels.append(TripModel(title: "Russian Trip"))
+                Data.tripModels = MockData.createMockTripModelData()
             }
             DispatchQueue.main.async {
                 completion()

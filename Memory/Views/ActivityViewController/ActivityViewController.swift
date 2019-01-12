@@ -12,13 +12,18 @@ class ActivityViewController: UIViewController {
     
     @IBOutlet weak var backgroudImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addButton: AppUIButton!
     
     var tripId: UUID!
+    var tripTitle = ""
     var tripModel: TripModel?
     var sectionHeaderHeight: CGFloat = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = tripTitle
+        addButton.createFloatingActionButton()
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -26,14 +31,31 @@ class ActivityViewController: UIViewController {
             guard let self = self else { return }
             self.tripModel = tripModel
             guard let tripModel = tripModel else { return }
-            self.title = tripModel.title  // this title will show in the navigation bar at center
             self.backgroudImageView.image = tripModel.image
             self.tableView.reloadData()
         }
         
         sectionHeaderHeight = tableView.dequeueReusableCell(withIdentifier: "headerCell")?.contentView.bounds.height ?? 44
     }
-
+    
+    @IBAction func addAction(_ sender: AppUIButton) {
+        let alert = UIAlertController(title: "Which would you like to add?", message: nil, preferredStyle: .actionSheet)
+        let dayAction = UIAlertAction(title: "Day", style: .default) { (action) in
+            //
+        }
+        let activityAction = UIAlertAction(title: "Activity", style: .default) { (action) in
+            //
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(dayAction)
+        alert.addAction(activityAction)
+        alert.addAction(cancelAction)
+        alert.view.tintColor = Theme.tintColor
+        present(alert, animated: true)
+    }
+    
+    
 }
 
 extension ActivityViewController: UITableViewDelegate, UITableViewDataSource {
